@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1EEB258-6068-4E7F-B25E-27D3C9B6F7D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Patcher_RaffaeL_Rework</RootNamespace>
+    <AssemblyName>Patcher</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>metin2_cn.ico</ApplicationIcon>
+    <StartupObject>Metin2_MD5_Patcher.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cyclic\Redundancy\Check\CRC.cs" />
+    <Compile Include="RaffaeL_Work.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaffaeL_Work.Designer.cs">
+      <DependentUpon>RaffaeL_Work.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Source_files\DefinireLinkuri.cs" />
+    <Compile Include="Source_files\Executor.cs" />
+    <Compile Include="Source_files\Computer.cs" />
+    <Compile Include="Source_files\Configurare.cs" />
+    <Compile Include="Source_files\VerificareFisiere.cs" />
+    <Compile Include="Source_files\DescarcareFisiere.cs" />
+    <Compile Include="Source_files\DefinireElemente.cs" />
+    <Compile Include="Source_files\ListaDescarcare.cs" />
+    <Compile Include="Source_files\ProcesareLista.cs" />
+    <Compile Include="Source_files\ActivitateRetea.cs" />
+    <Compile Include="Source_files\Starter.cs" />
+    <Compile Include="Source_files\DefinitiiText.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RaffaeL_Work.resx">
+      <DependentUpon>RaffaeL_Work.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\sub_progress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_start_ds.png" />
+    <None Include="Resources\btn_web_up.png" />
+    <None Include="Resources\btn_web_on.png" />
+    <None Include="Resources\btn_web_dn.png" />
+    <None Include="Resources\btn_facebook_up.png" />
+    <None Include="Resources\btn_facebook_on.png" />
+    <None Include="Resources\btn_facebook_dn.png" />
+    <None Include="Resources\btn_discord_up.png" />
+    <None Include="Resources\btn_discord_on.png" />
+    <None Include="Resources\btn_discord_dn.png" />
+    <None Include="Resources\btn_forum_on.png" />
+    <None Include="Resources\btn_forum_up.png" />
+    <None Include="Resources\btn_forum_dn.png" />
+    <None Include="Resources\total_progress.png" />
+    <None Include="Resources\main_bg.png" />
+    <None Include="Resources\btn_start_up.png" />
+    <None Include="Resources\btn_start_dn.png" />
+    <None Include="Resources\btn_start_on.png" />
+    <None Include="Resources\btn_quit_up.png" />
+    <None Include="Resources\btn_quit_dn.png" />
+    <None Include="Resources\btn_option_up.png" />
+    <None Include="Resources\btn_option_on.png" />
+    <None Include="Resources\btn_option_ds.png" />
+    <None Include="Resources\btn_option_dn.png" />
+    <None Include="Resources\btn_minimize_up.png" />
+    <None Include="Resources\btn_minimize_dn.png" />
+    <None Include="Resources\btn_account_up.png" />
+    <None Include="Resources\btn_account_on.png" />
+    <None Include="Resources\btn_account_dn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="metin2_cn.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
